@@ -1,17 +1,15 @@
 ---
 seo:
-  title: Write beautiful docs with Markdown
-  description: Ship fast, flexible, and SEO-optimized documentation with beautiful
-    design out of the box. Docus brings together the best of the Nuxt ecosystem.
-    Powered by Nuxt UI.
+  title: OpenChat — Open‑source LLM chat UI
+  description: OpenChat is an open-source platform built with Next.js, on a mission to become the most feature-rich LLM chat UI.
 ---
 
-::u-page-hero
+:::u-page-hero
 #title
-Write beautiful docs with Markdown
+OpenChat — Open‑source LLM chat UI
 
 #description
-Ship fast, flexible, and SEO-optimized documentation with beautiful design out of the box. :br Docus brings the best of the Nuxt ecosystem.
+OpenChat is an open-source platform built with Next.js, on a mission to become the most feature-rich open-source LLM chat UI.
 
 #links
   :::u-button
@@ -35,18 +33,11 @@ Ship fast, flexible, and SEO-optimized documentation with beautiful design out o
   Star on GitHub
   :::
 
-#headline
-  :::u-button
-  ---
-  size: sm
-  to: https://github.com/nuxt-content/docus/releases/tag/v5.0.0
-  variant: outline
-  ---
-  Docus v5 →
-  :::
-::
+:::u-page-section
+  :video{.rounded-lg.shadow-md autoplay muted playsinline loop src="/landing/openchat.mp4"}
+:::
 
-::u-page-section
+:::u-page-section
   :::u-page-grid
     ::::u-page-card
     ---
@@ -141,7 +132,7 @@ Ship fast, flexible, and SEO-optimized documentation with beautiful design out o
         ::
         ```
         ::::::
-      :::::
+      ::::
     
     #title
     Enhanced Markdown syntax by [Nuxt Content]{.text-primary}
@@ -171,7 +162,7 @@ Ship fast, flexible, and SEO-optimized documentation with beautiful design out o
         }
       })
       ```
-      :::::
+      ::::
     
     #title
     Customize with [Nuxt App Config]{.text-primary}
@@ -187,7 +178,7 @@ Ship fast, flexible, and SEO-optimized documentation with beautiful design out o
     target: _blank
     ---
       :::::color-mode-switch
-      :::::
+      ::::
     
     #title
     [Nuxt Color]{.text-primary} mode
@@ -213,7 +204,7 @@ Ship fast, flexible, and SEO-optimized documentation with beautiful design out o
       light: /landing/light/command-menu.png
       loading: lazy
       ---
-      :::::
+      ::::
     
     #title
     Built-in navigation and [full-text search]{.text-primary}
@@ -230,7 +221,7 @@ Ship fast, flexible, and SEO-optimized documentation with beautiful design out o
     ---
       :::::browser-frame
       :video{.rounded-md controls loop playsinline src="https://res.cloudinary.com/nuxt/video/upload/v1747230893/studio/wzt9zfmdvk7hgmdx3cnt.mp4"}
-      :::::
+      ::::
     
     #title
     Collaborate on [Nuxt Studio]{.text-primary}
@@ -255,7 +246,7 @@ Ship fast, flexible, and SEO-optimized documentation with beautiful design out o
         light: /landing/light/nuxt-image.svg
         ---
         ::::::
-      :::::
+      ::::
     
     #title
     [Nuxt Image]{.text-primary} optimization
@@ -264,4 +255,4 @@ Ship fast, flexible, and SEO-optimized documentation with beautiful design out o
     Docus automatically converts Markdown images to use `<NuxtImg>` .
     ::::
   :::
-::
+:::
