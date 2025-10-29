@@ -9,7 +9,6 @@
     project-id="fdf740ad89d44724afb00ced952c68ab"
     export-id="f5f0ae6e5a414914bb04820546cde229"
     cached="false"
-    class="h-12 w-auto shrink-0"
   >
     <g transform="matrix(2.051536 0 0 2.051536 326.954903-12.883993)">
       <polygon

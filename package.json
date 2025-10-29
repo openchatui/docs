@@ -1,6 +1,6 @@
 {
-  "name": "docus-docs",
-  "description": "Official documentation for Docus, also used as playground.",
+  "name": "openchat-docs",
+  "description": "Offical Documentation for OpenChat",
   "type": "module",
   "scripts": {
     "build": "nuxt build",

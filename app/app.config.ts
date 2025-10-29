@@ -30,5 +30,9 @@ export default defineAppConfig({
         wrapper: 'flex-none',
       },
     },
-  },
+    colors: {
+      primary: 'blue',
+      neutral: 'zinc'
+    }
+  },  
 })

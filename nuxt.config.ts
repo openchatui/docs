@@ -1,11 +1,11 @@
 export default defineNuxtConfig({
   extends: ['docus'],
-  modules: ['@nuxtjs/plausible', '@nuxtjs/i18n'],
+  modules: ['@nuxtjs/plausible', '@nuxtjs/i18n', '@nuxt/ui'],
   css: ['~/assets/css/main.css'],
   site: {
-    name: 'Docus',
+    name: 'Docs',
   },
-  compatibilityDate: '2025-07-18',
+  compatibilityDate: '2025-10-28',
   i18n: {
     defaultLocale: 'en',
     locales: [{
@@ -17,12 +17,12 @@ export default defineNuxtConfig({
     }],
   },
   llms: {
-    domain: 'https://docus.dev',
-    title: 'Docus',
-    description: 'Write beautiful docs with Markdown.',
+    domain: 'https://openchatui.org',
+    title: 'OpenChat Docs',
+    description: 'Offical Documentation for OpenChat',
     full: {
-      title: 'Docus',
-      description: 'Write beautiful docs with Markdown.',
+      title: 'OpenChat Docs',
+      description: 'Offical Documentation for OpenChat',
     },
   }
 })
