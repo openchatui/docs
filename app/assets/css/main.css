@@ -4,5 +4,83 @@
 @theme static {
   --font-sans: 'Public Sans', sans-serif;
   --ui-container: 90rem;
+  --gradient-orange: 251 146 60;
+  --gradient-blue: 59 130 246;
   
+}
+
+/* Typed custom properties for smooth animation */
+@property --ox { syntax: '<percentage>'; inherits: true; initial-value: 10%; }
+@property --oy { syntax: '<percentage>'; inherits: true; initial-value: 0%; }
+@property --bx { syntax: '<percentage>'; inherits: true; initial-value: 90%; }
+@property --by { syntax: '<percentage>'; inherits: true; initial-value: 0%; }
+
+/* Animated radii for more organic, non-circular blobs */
+@property --orx { syntax: '<length>'; inherits: true; initial-value: 900px; }
+@property --ory { syntax: '<length>'; inherits: true; initial-value: 520px; }
+@property --brx { syntax: '<length>'; inherits: true; initial-value: 900px; }
+@property --bry { syntax: '<length>'; inherits: true; initial-value: 520px; }
+
+@keyframes lavaMove {
+  0% {
+    --ox: 14%; --oy: 4%;
+    --bx: 86%; --by: 4%;
+    --orx: 960px; --ory: 520px;
+    --brx: 980px; --bry: 500px;
+  }
+  25% {
+    --ox: 26%; --oy: 14%;
+    --bx: 74%; --by: 18%;
+    --orx: 1150px; --ory: 480px;
+    --brx: 1030px;  --bry: 620px;
+  }
+  50% {
+    --ox: 22%; --oy: 26%;
+    --bx: 66%; --by: 10%;
+    --orx: 980px;  --ory: 700px;
+    --brx: 1260px; --bry: 520px;
+  }
+  75% {
+    --ox: 26%; --oy: 12%;
+    --bx: 76%; --by: 12%;
+    --orx: 1060px; --ory: 560px;
+    --brx: 1110px; --bry: 660px;
+  }
+  100% {
+    --ox: 14%; --oy: 4%;
+    --bx: 86%; --by: 4%;
+    --orx: 960px; --ory: 520px;
+    --brx: 980px; --bry: 500px;
+  }
+}
+
+/* Global background gradients (only on landing when .landing-bg is on body) */
+body.landing-bg {
+  background-image:
+    /* Orange main blob + sub-lobe */
+    radial-gradient(var(--orx) var(--ory) at var(--ox) var(--oy), rgb(var(--gradient-orange) / 0.28), transparent 65%),
+    radial-gradient(calc(var(--orx) * 0.7) calc(var(--ory) * 0.7) at calc(var(--ox) + 8%) calc(var(--oy) + 6%), rgb(var(--gradient-orange) / 0.12), transparent 65%),
+    /* Blue main blob + sub-lobe */
+    radial-gradient(var(--brx) var(--bry) at var(--bx) var(--by), rgb(var(--gradient-blue) / 0.28), transparent 65%),
+    radial-gradient(calc(var(--brx) * 0.7) calc(var(--bry) * 0.7) at calc(var(--bx) - 8%) calc(var(--by) + 8%), rgb(var(--gradient-blue) / 0.12), transparent 65%),
+    linear-gradient(180deg, rgb(var(--gradient-blue) / 0.015), transparent 30%, rgb(var(--gradient-orange) / 0.015));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: difference, difference, difference, difference, normal;
+  animation: lavaMove 60s linear infinite;
+  will-change: background-position;
+}
+
+.dark body.landing-bg {
+  background-image:
+    radial-gradient(var(--orx) var(--ory) at var(--ox) var(--oy), rgb(var(--gradient-orange) / 0.16), transparent 65%),
+    radial-gradient(calc(var(--orx) * 0.7) calc(var(--ory) * 0.7) at calc(var(--ox) + 8%) calc(var(--oy) + 6%), rgb(var(--gradient-orange) / 0.08), transparent 65%),
+    radial-gradient(var(--brx) var(--bry) at var(--bx) var(--by), rgb(var(--gradient-blue) / 0.18), transparent 65%),
+    radial-gradient(calc(var(--brx) * 0.7) calc(var(--bry) * 0.7) at calc(var(--bx) - 8%) calc(var(--by) + 8%), rgb(var(--gradient-blue) / 0.10), transparent 65%),
+    linear-gradient(180deg, rgb(var(--gradient-blue) / 0.02), transparent 30%, rgb(var(--gradient-orange) / 0.02));
+  background-blend-mode: difference, difference, difference, difference, normal;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body { animation: none; }
 }

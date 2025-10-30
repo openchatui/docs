@@ -1,11 +1,10 @@
 export default defineAppConfig({
   socials: {
-    x: 'https://x.com/nuxt_js',
-    discord: 'https://discord.com/invite/ps2h6QT',
-    nuxt: 'https://nuxt.com',
+    discord: 'https://discord.gg/WQnmggQknM'
   },
   github: {
-    rootDir: 'docs',
+    url: 'https://github.com/openchatui/openchat',
+    branch: 'main'
   },
   toc: {
     bottom: {

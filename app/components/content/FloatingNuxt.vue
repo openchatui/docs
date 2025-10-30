@@ -1,8 +1,8 @@
 <template>
   <div class="flex-1 flex items-center justify-center">
     <NuxtImg
-      src="/landing/nuxt-logo-3D.svg"
-      class="h-42 floating-logo"
+      src="/landing/dark/NextOpenchatDark.png"
+      class="h-48 floating-logo"
       alt="Nuxt 3D Logo"
     />
   </div>
