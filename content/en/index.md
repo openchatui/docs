@@ -21,6 +21,7 @@ OpenChat is an open-source platform built with Next.js, on a mission to become t
   size: xl
   to: en/getting-started/installation
   trailing-icon: i-lucide-chevron-right
+  class: h-12 min-h-12 whitespace-nowrap leading-none
   ---
   Get started
   :::
@@ -32,12 +33,13 @@ OpenChat is an open-source platform built with Next.js, on a mission to become t
   size: xl
   to: https://github.com/nuxt-content/docus
   variant: outline
+  class: h-12 min-h-12 whitespace-nowrap leading-none
   ---
   Star on GitHub
   :::
 
 ::::u-page-section
-  :video{.rounded-lg.shadow-md autoplay muted playsinline loop src="/landing/openchat.mp4"}
+  :video{.rounded-lg.shadow-md autoplay muted playsinline loop preload="auto" style="background-image:url('/mountains.webp');background-size:cover;background-position:center;aspect-ratio:16/9;object-fit:cover" src="/landing/openchat.mp4"}
 ::::
 
 ::::
