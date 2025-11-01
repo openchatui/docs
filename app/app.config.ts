@@ -10,10 +10,23 @@ export default defineAppConfig({
     bottom: {
       links: [{
         icon: 'i-lucide-book-open',
-        label: 'Nuxt UI docs',
-        to: 'https://ui.nuxt.com/getting-started/installation/nuxt',
+        label: 'Vercel Next.js',
+        to: 'https://nextjs.org/docs',
         target: '_blank',
-      }],
+      },
+      {
+        icon: 'i-lucide-book-open',
+        label: 'AI SDK',
+        to: 'https://ai-sdk.dev/',
+        target: '_blank',
+      },
+      {
+        icon: 'i-lucide-book-open',
+        label: 'Docker',
+        to: 'https://docs.docker.com/',
+        target: '_blank',
+      }
+      ],
     },
   },
   ui: {
